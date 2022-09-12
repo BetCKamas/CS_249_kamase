@@ -6,6 +6,6 @@ public class HowdyPrinter {
     }
 
     public static String getPassword() { 
-        return "1234";
+        return "12345";
     }
 }
