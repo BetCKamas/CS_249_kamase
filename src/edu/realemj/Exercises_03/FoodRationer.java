@@ -10,8 +10,8 @@ public class FoodRationer {
         int totalFood = input.nextInt();
 
         System.out.println("Enter people cnt:");
-        int peopleCnt = input.nextInt();
-
+        var peopleCnt = input.nextInt();
+        
         System.out.println("Enter rations:");
         double rations = input.nextDouble();
 
@@ -19,5 +19,9 @@ public class FoodRationer {
         int days = (int)(totalFood/foodPerDay);
 
         System.out.println("DAYS LEFT: " + days);
+
+        input.close();
+
+        
     }
 }
