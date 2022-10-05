@@ -11,7 +11,7 @@ public class CircleLand {
 
         Matrix2D p = c.getCenter();
         System.out.println("BEFORE: " + p);
-        p.setValue(0,0,45);
+        p.setValue(0,0,45);  
         System.out.println("AFTER: " + c.getCenter());
     }
     
