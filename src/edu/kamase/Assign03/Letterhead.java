@@ -3,7 +3,7 @@ package edu.kamase.Assign03;
 public class Letterhead {
 
     private String slogan;
-    private String [] sloganLines;
+    private String [] sloganLines = {"\n","\n","\n","\n"};
     private char boundaryChar;
     private String name;
     private String letterhead;
@@ -71,19 +71,19 @@ public class Letterhead {
             sb.append(" ");
         }
 
-        sb.append(boundaryChar + "\n" + boundaryChar + " ");
+        sb.append(boundaryChar + "\n" );
 
         for(int i = 0; i < 4; i++){
             sb.append(boundaryChar + " " + sloganLines[i]);
 
-            spaceLength = width - sloganLines[i].length();
+            spaceLength = (width - 3) - sloganLines[i].length();
             for(int j = 0; j < spaceLength; j++){
                 sb.append(" ");
             }
             sb.append(boundaryChar + "\n" );
         }
 
-        for(int i = 0; i < width; i++){
+        for(int i = 0; i < (width); i++){
             sb.append(boundaryChar);
         }
 
