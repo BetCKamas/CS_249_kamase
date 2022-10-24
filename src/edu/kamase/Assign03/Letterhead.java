@@ -2,11 +2,11 @@ package edu.kamase.Assign03;
 
 public class Letterhead {
 
-    private String slogan;
-    private String [] sloganLines = {"\n","\n","\n","\n"};
+    private String [] sloganLines;
     private char boundaryChar;
     private String name;
-    private String letterhead;
+
+    public Letterhead(){}
 
     public Letterhead(String name, String [] sloganLines, char boundaryChar){
         setName(name);
@@ -25,11 +25,9 @@ public class Letterhead {
     public String getSlogan(){
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < 4; i++){
-            sb.append(sloganLines[i]);
-            sb.append("\n");
+            sb.append(sloganLines[i] + "\n");
         }
-        slogan = sb.toString();
-        return slogan;
+        return sb.toString();
     }
 
     public void setName(String name){
@@ -41,7 +39,7 @@ public class Letterhead {
     }
 
     public void setSlogan(String [] sloganLines){
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < sloganLines.length; i++){
             this.sloganLines[i] = sloganLines[i];
         }
 
@@ -89,9 +87,8 @@ public class Letterhead {
 
         sb.append("\n");
 
-        letterhead = sb.toString();
+        return sb.toString();
 
-        return letterhead;
     }
 
 }

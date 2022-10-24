@@ -4,17 +4,19 @@ import java.util.*;
 
 public class LetterPrinter {
     public static Letterhead askForLetterheadData(Scanner input){
+        Letterhead businessInfo = new Letterhead();
+        
         System.out.println("Enter a business name:");
-        String name = input.nextLine();
+        businessInfo.setName(input.nextLine());
         System.out.println("Enter boundary character:");
         String boundCh = input.nextLine();
-        char boundaryChar = boundCh.charAt(0);
-        String [] sloganLines = {"\n","\n","\n","\n"};
+        businessInfo.setBoundaryChar(boundCh.charAt(0));
+        String [] sloganLines = new String[4];
         System.out.println("Enter slogan (max 4 lines):");
+        businessInfo.setSlogan(sloganLines);
         for(int i = 0; i < 4; i++){
             sloganLines[i] = input.nextLine();
-        }
-        Letterhead businessInfo = new Letterhead(name, sloganLines, boundaryChar);
+            }
         return businessInfo;
     }
 
