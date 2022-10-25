@@ -6,8 +6,6 @@ public class Letterhead {
     private char boundaryChar;
     private String name;
 
-    public Letterhead(){}
-
     public Letterhead(String name, String [] sloganLines, char boundaryChar){
         setName(name);
         setSlogan(sloganLines);
@@ -23,8 +21,9 @@ public class Letterhead {
     }
 
     public String getSlogan(){
+   
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < sloganLines.length; i++){
             sb.append(sloganLines[i] + "\n");
         }
         return sb.toString();
@@ -39,6 +38,7 @@ public class Letterhead {
     }
 
     public void setSlogan(String [] sloganLines){
+        this.sloganLines = new String[sloganLines.length];
         for(int i = 0; i < sloganLines.length; i++){
             this.sloganLines[i] = sloganLines[i];
         }
@@ -47,42 +47,63 @@ public class Letterhead {
 
     public String toString(){
         int width = 40;
-       // int height = 8;
+        int height = 7;
+  
         StringBuilder sb = new StringBuilder();
 
+        // first line all boundary chars
         for(int i = 0; i < width; i++){
-            sb.append(boundaryChar);
+            sb.append(getBoundaryChar());
         }
         sb.append("\n");
+        int curHeight = 1;
 
         int spaceLength = (width - 3) - name.length();
 
-        sb.append(boundaryChar + " " + name);
+        // second line starting 
+        sb.append(getBoundaryChar() + " " + getName());
 
         for(int i = 0; i < spaceLength; i++){
             sb.append(" ");
         }
 
-        sb.append(boundaryChar + "\n" + boundaryChar);
+        sb.append(getBoundaryChar() + "\n" + getBoundaryChar());
+        curHeight++;
 
+        // third line starting blank except for boundary
         for(int i = 0; i < (width-2); i++){
             sb.append(" ");
         }
 
-        sb.append(boundaryChar + "\n" );
+        sb.append(getBoundaryChar() + "\n" );
+        curHeight++;
 
-        for(int i = 0; i < 4; i++){
-            sb.append(boundaryChar + " " + sloganLines[i]);
+        // fourth line starting all slogan lines
+        for(int i = 0; i < sloganLines.length; i++){
+            sb.append(getBoundaryChar() + " " + sloganLines[i]);
 
-            spaceLength = (width - 3) - sloganLines[i].length();
+            spaceLength = (width - 3) - (sloganLines[i].length());
             for(int j = 0; j < spaceLength; j++){
                 sb.append(" ");
             }
-            sb.append(boundaryChar + "\n" );
+            sb.append(getBoundaryChar() + "\n" );
+            curHeight++;
         }
 
-        for(int i = 0; i < (width); i++){
-            sb.append(boundaryChar);
+        // filling in with blank lines if less than 4 slogan lines
+        while(curHeight < height){
+            sb.append(getBoundaryChar());
+            for(int i = 0; i < (width-2); i++){
+                sb.append(" ");
+            }
+            sb.append(getBoundaryChar() + "\n");
+            curHeight++;
+        
+        }
+
+        // last line that is all boundary chars
+        for(int i = 0; i < width; i++){
+            sb.append(getBoundaryChar());
         }
 
         sb.append("\n");
