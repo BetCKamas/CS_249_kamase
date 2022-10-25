@@ -4,7 +4,6 @@ import java.util.*;
 
 public class LetterPrinter {
     public static Letterhead askForLetterheadData(Scanner input){
-        //Letterhead businessInfo = new Letterhead();
         
         System.out.println("Enter business name:");
         String name = input.nextLine();
@@ -16,9 +15,7 @@ public class LetterPrinter {
         for(int i = 0; i < 4; i++){
             sloganLines[i] = input.nextLine();
         }
-        Letterhead businessInfo = new Letterhead(name, sloganLines, boundaryChar);
-
-        return businessInfo;
+        return (new Letterhead(name, sloganLines, boundaryChar));
     }
 
     public static void main(String [] args){
