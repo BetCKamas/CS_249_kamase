@@ -36,4 +36,12 @@ public class Shape {
         }
         return s;
     }
+
+    public double getArea() {
+        return 0;
+    }
+
+    public static String getNameOfShape() {
+        return "Generic Shape";
+    }
 }

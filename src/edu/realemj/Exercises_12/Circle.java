@@ -43,4 +43,12 @@ public class Circle extends Shape {
         s += ", radius " + radius;
         return s;
     }
+
+    public double getArea() {
+        return Math.PI*radius*radius;
+    }
+    
+    public static String getNameOfShape() {
+        return "Circle";
+    }
 }
