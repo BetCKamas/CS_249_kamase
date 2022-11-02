@@ -25,7 +25,7 @@ public class Shape {
     }    
 
     public String toString() {
-        String s = "Shape at ";
+        String s = "Shape, ";
         s += center.toCoordString();
         s += ", ";
         if(filled) {
@@ -43,5 +43,19 @@ public class Shape {
 
     public static String getNameOfShape() {
         return "Generic Shape";
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        boolean isEqual = false;
+
+        if(other instanceof Shape os) {
+            if(filled == os.filled &&
+                center.equals(os.center)) {
+                    isEqual = true;
+            }
+        }
+
+        return isEqual;
     }
 }
