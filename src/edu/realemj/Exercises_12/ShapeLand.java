@@ -21,5 +21,47 @@ public class ShapeLand {
         System.out.println(c);
         System.out.println(c2);
         System.out.println(c3);
+
+        System.out.println(c2.getRadius());
+
+        System.out.println(Shape.getNameOfShape());
+        System.out.println(Circle.getNameOfShape());
+
+        // Polymorphism
+        // Effectively upcasting here
+        Shape sReallyC = new Circle(5.6);
+        Shape sReallyR = new Rectangle(3,9);
+
+        System.out.println(sReallyC);
+        System.out.println(sReallyR);
+        
+        Shape [] myShapes = new Shape[4];
+        myShapes[0] = s;
+        myShapes[1] = sReallyC;
+        myShapes[2] = sReallyR;
+        myShapes[3] = new Square(9);
+
+        printShape(c2);
+
+        System.out.println("My shapes:");
+        for(Shape t: myShapes) {
+            System.out.println(t);
+            printArea(t);
+        }
     }    
+
+    public static void printShape(Shape s) {
+        System.out.println("MY GLORIOUS SHAPE: " + s);
+    }
+
+    public static void printArea(Shape s) {
+        System.out.println("Area = " + s.getArea());
+
+        if(s instanceof Circle) {
+            // Downcasting
+            Circle c = (Circle)s;
+            System.out.println("* radius = " + c.getRadius());
+            System.out.println("* radius = " + ((Circle)s).getRadius());
+        }
+    }
 }
