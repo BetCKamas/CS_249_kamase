@@ -5,8 +5,8 @@ public class CircleLand {
     public static void main(String [] args) {
 
         Circle c = new Circle();
-        double r = c.getRadius();
-        r = 10.0;
+        //double r = c.getRadius();
+        //r = 10.0;
         System.out.println(c.getRadius());
 
         Matrix2D p = c.getCenter();
