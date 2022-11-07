@@ -15,9 +15,13 @@ public class Rectangle extends Shape {
         return width*height;
     }
 
+    public double getWidth() { return width; }
+    public double getHeight() { return height; }
+
     @Override
     public String toString() {
         String s = super.toString();
+        s = "Rectangle -> " + s;
         s += ", (" + width + " x " + height + ")";
         return s;
     }    

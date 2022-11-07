@@ -48,6 +48,31 @@ public class ShapeLand {
             System.out.println(t);
             printArea(t);
         }
+
+        Circle masterC = new Circle(5.7, true, 
+                                    Matrix2D.makePoint2D(1,2));
+
+        Circle otherC = new Circle(5.7, true, 
+                                    Matrix2D.makePoint2D(1,2));
+
+        Circle diffRad = new Circle(9.1, true, 
+                                    Matrix2D.makePoint2D(1,2));
+
+        Circle diffFilled = new Circle(5.7, false, 
+                                    Matrix2D.makePoint2D(1,2));
+
+        Circle diffCenter = new Circle(5.7, true, 
+                                    Matrix2D.makePoint2D(3,4));
+
+        System.out.println(masterC.equals(s));
+        System.out.println(masterC.equals(diffRad));
+        System.out.println(masterC.equals(diffFilled));
+        System.out.println(masterC.equals(diffCenter));
+        System.out.println(masterC.equals(otherC));
+
+
+
+
     }    
 
     public static void printShape(Shape s) {
@@ -62,6 +87,10 @@ public class ShapeLand {
             Circle c = (Circle)s;
             System.out.println("* radius = " + c.getRadius());
             System.out.println("* radius = " + ((Circle)s).getRadius());
+        }
+
+        if(s instanceof Rectangle r) {
+            System.out.println("* width = " + r.getWidth());
         }
     }
 }
