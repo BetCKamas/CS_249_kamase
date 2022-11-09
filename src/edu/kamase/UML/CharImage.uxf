@@ -5,7 +5,11 @@
 -fillChar:char
 -image:char [][]
 --
+<<<<<<< HEAD
 +CharImage(rowCnt:int , colCnt:int , fillChar:char)
+=======
++CharImage(rowCnt:int , colCntLint , fillChar:char)
+>>>>>>> 9dffcd89b709a276e95b2a2508113662673c4ba2
 +clear():void
 +getRowCnt():int
 +getColCnt():int 
