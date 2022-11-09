@@ -11,11 +11,11 @@ public class CharImage {
         this.rowCnt = rowCnt;
         this.colCnt = colCnt;
         this.fillChar = fillChar;
-        this.image = new char[rowCnt][colCnt];
+        image = new char[rowCnt][colCnt];
 
-        for(int i = 0; i < this.image.length; i++){
-            for(int j = 0; j < this.image[0].length; j++){
-                this.image[i][j] = this.fillChar;
+        for(int i = 0; i < image.length; i++){
+            for(int j = 0; j < image[0].length; j++){
+                image[i][j] = this.fillChar;
             }
         }
 
