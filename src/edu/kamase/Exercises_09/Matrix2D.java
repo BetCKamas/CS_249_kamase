@@ -49,6 +49,9 @@ public class Matrix2D {
         sb.append(")");
         return sb.toString();
     }
+    public String makePoint3DString() {
+        return data[0][0] + " " + data[1][0] + " " + data[2][0];
+    }
     
 
     public boolean isInBounds(int r, int c){
@@ -111,6 +114,37 @@ public class Matrix2D {
         m.setValue(0,2,xoff);
         m.setValue(1,2,yoff);
         return m;
+    }
+    public static Matrix2D makePoint3D(double x, double y, double z) {
+        Matrix2D v = new Matrix2D(4, 1);
+        v.setValue(0,0,x);
+        v.setValue(1,0,y);
+        v.setValue(2, 0, z);
+        v.setValue(3,0,1);
+        return v;
+    }
+    @Override
+    public boolean equals(Object other) {
+        boolean isEqual = false;
+        if(other instanceof Matrix2D mo) {
+            if(getRowCnt() == mo.getRowCnt() &&
+                getColCnt() == mo.getColCnt()) {
+
+                boolean valuesSame = true;
+
+                for(int i = 0; i < getRowCnt(); i++) {
+                    for(int j = 0; j < getColCnt(); j++) {
+                        if(Math.abs(data[i][j] - mo.data[i][j]) >= 1e-15) {
+                            valuesSame = false;
+                        }
+                    }
+                }
+
+                isEqual = valuesSame;
+            }
+        }
+
+        return isEqual;
     }
     
 }

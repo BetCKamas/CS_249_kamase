@@ -18,8 +18,11 @@ public class ShapeLand {
         System.out.println(c);
         System.out.println(c2);
 
+        Circle c3 = null;
+
         try{
-            Circle c3 = new Circle(7.8, false,
+            printShape(c3);
+            c3 = new Circle(7.8, false,
                                 Matrix2D.makePoint2D(-2 , 9.5));
 
 
@@ -55,7 +58,11 @@ public class ShapeLand {
                 System.out.println(t);
                 printArea(t);
             }
-      
+        }
+        catch(InvalidRadiusException e) {
+            System.err.println(e);
+        }
+        try{
             Circle masterC = new Circle(5.7, true, Matrix2D.makePoint2D(1,2));
             Circle diffRad = new Circle(9.1, true, Matrix2D.makePoint2D(1,2));
             Circle diffFilled = new Circle(5.7, false, Matrix2D.makePoint2D(1,2));
