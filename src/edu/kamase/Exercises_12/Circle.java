@@ -1,13 +1,13 @@
 package edu.kamase.Exercises_12;
 import edu.kamase.Exercises_09.Matrix2D;
-
+import edu.kamase.Exercises_13.InvalidRadiusException;
 public class Circle extends Shape {
     private double radius = 1.0;
 
     public Circle(){};
 
-    public Circle(double radius){
-        this.radius = radius;
+    public Circle(double radius) throws InvalidRadiusException {
+        setRadius(radius);
     }
 
     public Circle(boolean filled, Matrix2D center){
@@ -17,7 +17,7 @@ public class Circle extends Shape {
 
     }
 
-    public Circle(double radius, boolean filled, Matrix2D center){
+    public Circle(double radius, boolean filled, Matrix2D center) throws InvalidRadiusException {
         super(filled, center);
         //this.filled = filled;
         //setCenter(center);
@@ -29,9 +29,12 @@ public class Circle extends Shape {
         return radius;
     }
 
-    public void setRadius(double radius){
+    public void setRadius(double radius) throws InvalidRadiusException{
         if(radius >= 0) {
             this.radius = radius;
+        }
+        else{
+            throw new InvalidRadiusException("No negative radii!" + radius);
         }
 
     }
