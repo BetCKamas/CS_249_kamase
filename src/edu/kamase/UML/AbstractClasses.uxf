@@ -1,0 +1,23 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>350</x><y>110</y><w>240</w><h>240</h></coordinates><panel_attributes>/Shape/
+--
+#filled:boolean
+-center:Matrix2D
+--
+#Shape()
+#Shape(filled:boolean, center:Matrix2D)
++isFilled():boolean
++getCenter():Matrix2D
++setFilled(filled:boolean):void
++setCenter(center:Matrix2D):void
++toString():String
+/+getArea():double/
+_+getNameOfShape():String_
++equals(other:Object):boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>390</y><w>240</w><h>60</h></coordinates><panel_attributes>/CircleLike/
+--
+--
+/+getRadius():double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>340</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>490</y><w>240</w><h>90</h></coordinates><panel_attributes>Circle
+--
+-radius:double
+--
++getArea():double
++getRadius():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>440</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element></diagram>
