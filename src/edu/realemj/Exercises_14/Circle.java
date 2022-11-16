@@ -8,6 +8,7 @@ public class Circle extends CircleLike {
         return Math.PI*radius*radius;
     }
 
+    @Override
     public double getRadius() {
         return radius;
     }
