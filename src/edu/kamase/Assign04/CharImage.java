@@ -1,6 +1,6 @@
 package edu.kamase.Assign04;
 
-public class CharImage {
+public class CharImage { 
 
     private int rowCnt;
     private int colCnt;
