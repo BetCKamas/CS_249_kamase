@@ -1,6 +1,6 @@
 package edu.kamase.Exercises_14.TwentyQuestions;
 
-public class Apple extends Fruit implements Edible,Flammable{
+public class Apple implements Edible,Flammable{
     public String howToEat(){
         return "pie";
     }

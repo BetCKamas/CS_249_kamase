@@ -58,5 +58,8 @@ public abstract class Shape {
         return isEqual;
         
     }
+    public int compareTo(){
+        
+    }
     
 }
