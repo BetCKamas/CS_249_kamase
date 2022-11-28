@@ -6,6 +6,7 @@ public class AbstractShapeLand {
         //Shape s = new Shape();
         Shape c = new Circle();
         double a = c.getArea();
+        System.out.println(a);
         
     }
     

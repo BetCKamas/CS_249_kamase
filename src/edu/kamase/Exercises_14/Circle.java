@@ -1,6 +1,6 @@
 package edu.kamase.Exercises_14;
 
-public class Circle extends Shape {
+public class Circle extends CircleLike implements Comparable<Circle>{
     private double radius;
 
     public double getArea(){

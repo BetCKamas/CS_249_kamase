@@ -19,6 +19,7 @@ public class SortCircles {
         for(Circle c: myCircles) {
             System.out.println("* " + c);
         }
+        input.close();
 
     }
     
