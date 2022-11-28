@@ -16,7 +16,8 @@
 /Edible/
 --
 /+howToEat(): String/
-/+howToBurn(temp:double): String/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>45</x><y>297</y><w>117</w><h>81</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/+howToBurn(temp:double): String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>45</x><y>297</y><w>117</w><h>81</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 /Flammable/
 --
 /+howToIgnite(): String/
