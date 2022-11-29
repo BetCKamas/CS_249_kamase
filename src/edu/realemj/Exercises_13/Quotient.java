@@ -74,6 +74,8 @@ public class Quotient {
         
 
         System.out.println("Program complete.");
+
+        input.close();
     }
     
 }

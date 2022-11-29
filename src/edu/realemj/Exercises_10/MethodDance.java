@@ -18,10 +18,10 @@ public class MethodDance {
     }
 
     public static void main(String [] args) {
-        int s = MethodDance.getStaticData();
+        //int s = MethodDance.getStaticData();
 
-        MethodDance m = new MethodDance();
-        int d = m.getInstanceData();
+        //MethodDance m = new MethodDance();
+        //int d = m.getInstanceData();
 
     }
 

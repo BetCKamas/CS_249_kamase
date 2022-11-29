@@ -43,8 +43,10 @@ public class OBJModel {
                         }
                         default -> {}
                     }
+                    tokens.close();
+                    
                 }
-            }
+            }  
         }
     }
 
