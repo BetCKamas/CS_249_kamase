@@ -1,4 +1,4 @@
-package edu.realemj.Assign06;
+package edu.kamase.Assign06;
 //NOTE: CHANGE realemj to YOUR SITNETID!!!
 import edu.realemj.Testing.*;
 import org.testng.Assert;

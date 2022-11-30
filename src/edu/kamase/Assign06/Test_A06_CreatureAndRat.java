@@ -1,4 +1,4 @@
-package edu.realemj.Assign06;
+package edu.kamase.Assign06;
 import edu.realemj.Assign04.CharImage;
 //NOTE: CHANGE realemj to YOUR SITNETID!!!
 import org.testng.Assert;

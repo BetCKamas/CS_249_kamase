@@ -58,12 +58,8 @@ public abstract class Shape {
         return isEqual;
         
     }
-<<<<<<< HEAD
-
-=======
     //public int compareTo(){
         
     //}
->>>>>>> 7a80c1a54ed785a578cd61868819394850b5b3c0
     
 }
