@@ -24,6 +24,15 @@ public abstract class Creature implements Drawable,Loadable{
         this.col = col;
     }
     public void load(Scanner input)throws GameFileException{
+        try{
+            row = input.nextInt();
+            col = input.nextInt();
+        }
+        catch(Exception e){
+            row = 0;
+            col = 0;
+            throw new GameFileException("Error loading Creature", e);
+        }
 
     }    
 }

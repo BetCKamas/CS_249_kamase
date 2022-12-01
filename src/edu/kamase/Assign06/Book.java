@@ -5,7 +5,7 @@ public class Book extends Item{
     private String skill = "";
 
     public Book(){
-
+        // do nothing
     }
     public Book(String ID, int value, String skill){
         super(ID,value);
@@ -24,7 +24,16 @@ public class Book extends Item{
         return super.toString() + ", enhances " + skill; 
     }
     public void load(Scanner input) throws GameFileException{
-
+        try{
+            super.load(input);
+            skill = input.next();
+        }
+        catch(Exception e ) {
+            super.setID("");
+            super.setValue(0);
+            skill = "";
+            throw new GameFileException("Error loading Book", e);
+        }
     }
     
 }

@@ -28,6 +28,15 @@ public class Item implements Loadable {
         return ID + " with value " + value;
     }
     public void load(Scanner input) throws GameFileException{
+        try{
+            ID = input.next();
+            value = input.nextInt();
+        }
+        catch(Exception e){
+            ID = "";
+            value = 0;
+            throw new GameFileException("Error loading Item",e );
+        }
 
     }
 
