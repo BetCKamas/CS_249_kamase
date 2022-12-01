@@ -29,7 +29,17 @@ public class GameState implements Loadable {
     //NOT DONE
     public void load(Scanner input) throws GameFileException{
         map.clear();
-        input.next();
+        fellows.clear();
+        int lineNum = input.nextInt();
+        for(int i = 0; i < lineNum; i++){
+            String typeName = input.next();
+            Loadable m = createLoadable(typeName);
+            m.load(input);
+            fellows.add(m);
+            if(m instanceof Drawable d){
+                d.draw(map);
+            }
+        }
     }
     public String toString(){
         String status = "MAP:\n" + map.getMapString() + "\nCREATURES:\n";
@@ -53,7 +63,7 @@ public class GameState implements Loadable {
            writer.close();
         }
         catch(Exception e){
-            throw new GameFileException(" Failed to save file!",e);
+            throw new GameFileException("Failed to save file!", e);
         }
     }
 }
