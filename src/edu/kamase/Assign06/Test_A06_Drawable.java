@@ -1,5 +1,5 @@
 package edu.kamase.Assign06;
-import edu.realemj.Assign04.CharImage;
+import edu.kamase.Assign04.CharImage;
 //NOTE: CHANGE realemj to YOUR SITNETID!!!
 import org.testng.annotations.Test;
 
