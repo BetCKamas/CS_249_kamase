@@ -26,7 +26,6 @@ public class GameState implements Loadable {
         }
 
     }
-    //NOT DONE
     public void load(Scanner input) throws GameFileException{
         map.clear();
         fellows.clear();

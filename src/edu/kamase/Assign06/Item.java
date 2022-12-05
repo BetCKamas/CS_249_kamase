@@ -6,7 +6,7 @@ public class Item implements Loadable {
     private String ID = "";
 
     public Item(){
-
+        // do nothing
     }
     public Item(String ID, int value){
         this.ID = ID;
