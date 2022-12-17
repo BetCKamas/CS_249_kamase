@@ -1,5 +1,5 @@
 package edu.kamase.Assign06;
-import edu.kamase.Assign04.CharImage;
+import edu.kamase.Assign04.CharImage; 
 
 import java.io.PrintWriter;
 import java.util.*;
